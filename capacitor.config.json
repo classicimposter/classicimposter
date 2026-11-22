@@ -1,0 +1,8 @@
+{
+  "appId": "com.imposter.partygame",
+  "appName": "Classic Imposter",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#ffd02b"
+  }
+}
