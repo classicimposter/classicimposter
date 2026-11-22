@@ -3,6 +3,8 @@
   "appName": "Classic Imposter",
   "webDir": "www",
   "android": {
-    "backgroundColor": "#ffd02b"
+    "backgroundColor": "#ffd02b",
+    "adjustMarginsForEdgeToEdge": "force",
+    "allowMixedContent": false
   }
 }

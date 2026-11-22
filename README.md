@@ -1,4 +1,4 @@
-# 🕵️ IMPOSTER – Online-Partyspiel
+# 🕵️ Classic Imposter – Online-Partyspiel
 
 Partyspiel im Nintendo-Switch-Stil für Web und Android. Alle bekommen dasselbe geheime Wort, nur der **Imposter** nicht. Ihr redet darüber, ohne das Wort zu sagen. Wer verdächtig ist, wird nach **STOPP!** rausgewählt.
 
@@ -18,7 +18,8 @@ Partyspiel im Nintendo-Switch-Stil für Web und Android. Alle bekommen dasselbe 
 - Reines HTML/CSS/JS ohne Build-Schritt (`www/`)
 - 🌐 Spielen: https://classicimposter.github.io/classicimposter/
 - 📱 APK: https://github.com/classicimposter/classicimposter/releases/latest/download/imposter.apk
-- Multiplayer per WebRTC über [PeerJS](https://peerjs.com) (kostenloser öffentlicher Vermittlungsserver). Das Handy des Hosts ist der Spielserver.
+- Multiplayer über öffentliche MQTT-Relays (WebSocket; EMQX, HiveMQ, shiftr.io als Ausweich-Server). Alle Nachrichten sind mit einem Schlüssel aus dem Gruppen-Code verschlüsselt (AES-GCM). Funktioniert in jedem Netz, auch über mobile Daten. Das Handy des Hosts ist der Spielserver.
+- Android: Text-Zoom ist fest auf 100 % (`android-overrides/MainActivity.java`), Schrift (Fredoka) ist eingebaut, Hochformat.
 - Android-App mit Capacitor. Die APK wird per GitHub Actions gebaut (`.github/workflows/build.yml`) und als Release veröffentlicht.
 
 ## Lokal starten

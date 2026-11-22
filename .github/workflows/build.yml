@@ -50,6 +50,10 @@ jobs:
           npx cap add android
           npx capacitor-assets generate --android --assetPath assets
           npx cap sync android
+          cp android-overrides/MainActivity.java android/app/src/main/java/com/imposter/partygame/MainActivity.java
+          # Hochformat erzwingen und Tastatur sauber einblenden
+          sed -i 's/android:name=".MainActivity"/android:name=".MainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/' android/app/src/main/AndroidManifest.xml
+          grep -n "MainActivity" android/app/src/main/AndroidManifest.xml
       - name: APK bauen
         working-directory: android
         run: |
